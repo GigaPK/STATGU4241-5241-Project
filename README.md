@@ -27,7 +27,7 @@ https://code.visualstudio.com/docs/editor/github
   - Remember to pull and push to GitHub frequently to avoid merge conflicts
   - Use `Issues` on lines which you feel needs to be fixed, want to comment on, or ask questions
   - Make sure to @ who is responsible for the code to notify them
-  - More on pull requests\
+  - More on pull requests
   https://code.visualstudio.com/blogs/2018/09/10/introducing-github-pullrequests
 
 
