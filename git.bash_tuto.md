@@ -4,10 +4,15 @@
   https://git-scm.com/docs \
   https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line 
   
-  **! you first have to install git to your machine!**
+  *! you first have to install git to your machine!*
   * For MacOS and Linux: Unix based commands are built-in
   * For Windows: use git bash prompt instead of Windows Prompt
-
+ 
+  **Or simply you can use GitHub Desktop, it has an interface easier for beginners than to write command lines on the Terminal**
+ 
+  *recommended using VS Code because it has a GitHub and Python extension but in case you are using another program since they both have initial learning curves*
+  
+ 
 ## Basic commands
 ### Navigate folders
 * `pwd`: present working directory; can check which dir git session is making changes to
@@ -24,4 +29,3 @@
 * `git pull`: download changes made from remote repository and merge with your file
 
 
-**Or simply you can use GitHub Desktop, it has an interface easier for beginners than to write command lines on the Terminal**
