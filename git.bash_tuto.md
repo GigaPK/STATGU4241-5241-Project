@@ -22,3 +22,6 @@
   + `git commit --amend`: instead of creating a new commit, staged changes will be added to the previous commit
 * `git push -u origin master`: push to master branch
 * `git pull`: download changes made from remote repository and merge with your file
+
+
+**Or simply you can use GitHub Desktop, it has an interface easier for beginners than to write command lines on the Terminal**
