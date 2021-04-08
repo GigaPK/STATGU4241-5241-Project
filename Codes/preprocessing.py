@@ -45,6 +45,9 @@ def neglog(x):
 name_gender_final_df['Neg Log Probs'] = name_gender_final_df[
     ['Probability']].apply(neglog)
 
+# change genders to binary values
+name_gender_final_df = name_gender_final_df.replace(["M", "F"],[0, 1])
+
 print(name_gender_final_df.head(10))
 
 name_gender_final_df.to_csv(r'/Users/philip/Stat_ML/Project/STATGU4241-5241-Project/data_processing/gender_names_final.csv')
