@@ -10,7 +10,11 @@ import pandas as pd
 from collections import defaultdict
 # import math
 
-names = pd.read_csv("name_gender_dataset.csv")
+## i am commenting these out to change my working directory
+# import os
+# os.chdir('/Users/yunjeesun/Documents/GitHub/STATGU4241-5241-Project/')
+
+names = pd.read_csv("dataset/name_gender_dataset.csv")
 
 characters = defaultdict(int)
 
@@ -50,7 +54,7 @@ name_gender_final_df = name_gender_final_df.replace(["M", "F"],[0, 1])
 
 print(name_gender_final_df.head(10))
 
-name_gender_final_df.to_csv(r'/Users/philip/Stat_ML/Project/STATGU4241-5241-Project/data_processing/gender_names_final.csv')
+name_gender_final_df.to_csv(r'dataset/gender_names_final.csv')
 
 
 
