@@ -1,0 +1,93 @@
+{
+ "metadata": {
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.0-final"
+  },
+  "orig_nbformat": 2,
+  "kernelspec": {
+   "name": "python390jvsc74a57bd07812ea015bdcee6f23a998adcdd2ef97c151c0c241b7b7070987d9313e41299d",
+   "display_name": "Python 3.9.0 64-bit"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2,
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import os\n",
+    "os.getcwd()\n",
+    "# os.chdir('/Users/yunjeesun/Documents/GitHub/STATGU4241-5241-Project/')\n",
+    "## i am commenting this out becasue of working directory"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from sklearn import datasets\n",
+    "import matplotlib.pyplot as plt\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import seaborn as sns\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "output_type": "execute_result",
+     "data": {
+      "text/plain": [
+       "   Unnamed: 0     Name  Gender    Count  Probability     0     1     2     3  \\\n",
+       "0           0    James       0  5304407     0.014517  10.0   1.0  13.0   5.0   \n",
+       "1           1     John       0  5260831     0.014398  10.0  15.0   8.0  14.0   \n",
+       "2           2   Robert       0  4970386     0.013603  18.0  15.0   2.0   5.0   \n",
+       "3           3  Michael       0  4579950     0.012534  13.0   9.0   3.0   8.0   \n",
+       "4           4  William       0  4226608     0.011567  23.0   9.0  12.0  12.0   \n",
+       "\n",
+       "      4  ...   16   17   18   19   20   21   22   23   24  Neg Log Probs  \n",
+       "0  19.0  ...  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0       4.232450  \n",
+       "1   0.0  ...  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0       4.240699  \n",
+       "2  18.0  ...  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0       4.297490  \n",
+       "3   1.0  ...  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0       4.379299  \n",
+       "4   9.0  ...  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0       4.459588  \n",
+       "\n",
+       "[5 rows x 31 columns]"
+      ],
+      "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Unnamed: 0</th>\n      <th>Name</th>\n      <th>Gender</th>\n      <th>Count</th>\n      <th>Probability</th>\n      <th>0</th>\n      <th>1</th>\n      <th>2</th>\n      <th>3</th>\n      <th>4</th>\n      <th>...</th>\n      <th>16</th>\n      <th>17</th>\n      <th>18</th>\n      <th>19</th>\n      <th>20</th>\n      <th>21</th>\n      <th>22</th>\n      <th>23</th>\n      <th>24</th>\n      <th>Neg Log Probs</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>0</th>\n      <td>0</td>\n      <td>James</td>\n      <td>0</td>\n      <td>5304407</td>\n      <td>0.014517</td>\n      <td>10.0</td>\n      <td>1.0</td>\n      <td>13.0</td>\n      <td>5.0</td>\n      <td>19.0</td>\n      <td>...</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>4.232450</td>\n    </tr>\n    <tr>\n      <th>1</th>\n      <td>1</td>\n      <td>John</td>\n      <td>0</td>\n      <td>5260831</td>\n      <td>0.014398</td>\n      <td>10.0</td>\n      <td>15.0</td>\n      <td>8.0</td>\n      <td>14.0</td>\n      <td>0.0</td>\n      <td>...</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>4.240699</td>\n    </tr>\n    <tr>\n      <th>2</th>\n      <td>2</td>\n      <td>Robert</td>\n      <td>0</td>\n      <td>4970386</td>\n      <td>0.013603</td>\n      <td>18.0</td>\n      <td>15.0</td>\n      <td>2.0</td>\n      <td>5.0</td>\n      <td>18.0</td>\n      <td>...</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>4.297490</td>\n    </tr>\n    <tr>\n      <th>3</th>\n      <td>3</td>\n      <td>Michael</td>\n      <td>0</td>\n      <td>4579950</td>\n      <td>0.012534</td>\n      <td>13.0</td>\n      <td>9.0</td>\n      <td>3.0</td>\n      <td>8.0</td>\n      <td>1.0</td>\n      <td>...</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>4.379299</td>\n    </tr>\n    <tr>\n      <th>4</th>\n      <td>4</td>\n      <td>William</td>\n      <td>0</td>\n      <td>4226608</td>\n      <td>0.011567</td>\n      <td>23.0</td>\n      <td>9.0</td>\n      <td>12.0</td>\n      <td>12.0</td>\n      <td>9.0</td>\n      <td>...</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>0.0</td>\n      <td>4.459588</td>\n    </tr>\n  </tbody>\n</table>\n<p>5 rows × 31 columns</p>\n</div>"
+     },
+     "metadata": {},
+     "execution_count": 14
+    }
+   ],
+   "source": [
+    "data = pd.read_csv(\"dataset/gender_names_final.csv\")\n",
+    "data.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ]
+}
