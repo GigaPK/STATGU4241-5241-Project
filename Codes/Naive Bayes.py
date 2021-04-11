@@ -75,3 +75,4 @@ model=GaussianNB()
 model.fit(X_train,Y_train)
 model_score = model.score(X_test,Y_test)
 print(model_score)
+#Output is 0.6004238770345068
