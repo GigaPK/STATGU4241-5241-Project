@@ -1,12 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+@author: Doo Won
+"""
+
 import numpy as np
 import pandas as pd
 from collections import defaultdict
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 
-"""
-@author: Doo Won 
-"""
 # import math
 # import os
 
@@ -78,4 +81,5 @@ model=GaussianNB()
 model.fit(X_train,Y_train)
 model_score = model.score(X_test,Y_test)
 print(model_score)
+
 #Output is 0.6004238770345068
